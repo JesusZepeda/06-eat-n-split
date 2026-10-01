@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import './App.css'
 
 const initialFriends = [
   {
@@ -51,13 +50,12 @@ export default function App() {
   }
 
   function handleSplitBill(value) {
-    console.log("value:", value);
     setFriends((friends) =>
       friends.map((friend) =>
         friend.id === selectedFriend.id
           ? { ...friend, balance: friend.balance + value }
-          : friend,
-      ),
+          : friend
+      )
     );
 
     setSelectedFriend(null);
@@ -206,7 +204,7 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
         value={paidByUser}
         onChange={(e) =>
           setPaidByUser(
-            Number(e.target.value) > bill ? paidByUser : Number(e.target.value),
+            Number(e.target.value) > bill ? paidByUser : Number(e.target.value)
           )
         }
       />
@@ -227,3 +225,4 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
     </form>
   );
 }
+
