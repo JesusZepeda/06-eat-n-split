@@ -55,7 +55,7 @@ export default function App() {
   }
 
   function handleSplitBill(value) {
-    console.log("value:", value);
+    // console.log("value:", value);
 
     setFriends((friends) =>
       friends.map((friend) =>
@@ -156,7 +156,7 @@ function FormAddFriend({ onAddFriend }) {
     };
 
     onAddFriend(newFriend);
-    console.log(newFriend);
+    // console.log(newFriend);
 
     setName("");
     setImage("https://i.pravatar.cc/48");
