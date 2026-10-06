@@ -1,3 +1,4 @@
+// 100 SELECTING A FRIEND
 import { useState } from "react";
 // import './App.css'
 
@@ -68,6 +69,7 @@ export default function App() {
           {showAddFriend ? "Close" : "Add friend"}
         </Button>
       </div>
+	  
       {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} />}
     </div>
   );
@@ -100,12 +102,12 @@ function Friend({ friend, onSelection, selectedFriend }) {
 
       {friend.balance < 0 && (
         <p className="red">
-          You owe {friend.name} ${Math.abs(friend.balance)}€
+          You owe {friend.name} ${Math.abs(friend.balance)}
         </p>
       )}
       {friend.balance > 0 && (
         <p className="green">
-          {friend.name} owes you ${Math.abs(friend.balance)}€
+          {friend.name} owes you ${Math.abs(friend.balance)}
         </p>
       )}
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
